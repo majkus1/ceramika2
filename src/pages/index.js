@@ -108,10 +108,7 @@ const IndexPage = () => {
           </div>
         </div>
       </main>
-      <section
-        className={`${isMenuOpen ? "blurred" : ""}`}
-        id="first-page"
-      >
+      <section className={`${isMenuOpen ? "blurred" : ""}`} id="first-page">
         <div className="welcome-txt reveal">
           <h2>Hurtownia Materiałów Budowlanych powstała w roku 1992</h2>
           <p className="skills-quality">
@@ -140,16 +137,24 @@ const IndexPage = () => {
             </Link>
           </div>
           <p className="come-to-us">
-            Przyjdź do nas i kup wszystko co jest Ci niezbędne do wykonania
-            dachu, elewacji, ogrodzenia z wyrobów ceramicznych!{" "}
+            W Ceramice znajdziesz wszystko co jest Ci niezbędne do wykonania
+            dachu, elewacji i ogrodzenia z wyrobów ceramicznych{" "}
           </p>
           <p className="goodpq">
-            Mamy to wszystko w najlepszej jakości i cenie!{" "}
+            Mamy to wszystko w konkurencyjnej cenie i najlepszej jakości{" "}
           </p>
-          <p className="welcome">Zapraszamy!!!</p>
+          <p className="welcome">
+            Zapraszamy na ulicę Baranowicką 144 w Białymstoku
+          </p>
         </div>
       </section>
       <section className={`${isMenuOpen ? "blurred" : ""} reveal`} id="office">
+      <div className="desktop-btn-offer">
+          <Link href="" className="check-offer">
+            <img src="/icons/arrow-right.png" />
+            Sprawdzam ofertę
+          </Link>
+        </div>
         <div className="office-gallery-container">
           <div className="office-gallery" ref={galleryRef}>
             {images.map((src, index) => (

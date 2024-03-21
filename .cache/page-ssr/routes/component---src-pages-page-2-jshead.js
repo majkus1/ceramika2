@@ -118,8 +118,8 @@ const Header = ({
         gsap__WEBPACK_IMPORTED_MODULE_3__["default"].to(link, {
           autoAlpha: 1,
           y: 0,
-          delay: 0.1 * index,
-          duration: 2.5
+          delay: 0.5,
+          duration: 1
         });
       });
     }
