@@ -108,73 +108,80 @@ const IndexPage = () => {
           </div>
         </div>
       </main>
-      <section className={`${isMenuOpen ? "blurred" : ""}`} id="first-page">
-        <div className="welcome-txt reveal">
-          <h2>Hurtownia Materiałów Budowlanych powstała w roku 1992</h2>
-          <p className="skills-quality">
-            Doświadczenia zebrane podczas lat pracy pozwoliły nam na nabycie
-            umiejętności w doborze odpowiednich materiałów. Również jakość
-            dostepnych u nas materiałów została wielokrotnie sprawdzona przez
-            nas samych i naszych klientów.{" "}
-          </p>
-          <p className="now">
-            W chwili obecnej posiadamy w sprzedaży wyroby ceramiczne najlepszej
-            jakości.{" "}
-          </p>
-          {/* <div className="btn-offer">
+
+      <div id="all-content">
+       <img src="/icons/1.jpg" className="bgc-page"/>
+        <section className={`${isMenuOpen ? "blurred" : ""}`} id="first-page">
+          <div className="welcome-txt reveal">
+            <h2>Hurtownia Materiałów Budowlanych powstała w roku 1992</h2>
+            <p className="skills-quality">
+              Doświadczenia zebrane podczas lat pracy pozwoliły nam na nabycie
+              umiejętności w doborze odpowiednich materiałów. Również jakość
+              dostepnych u nas materiałów została wielokrotnie sprawdzona przez
+              nas samych i naszych klientów.{" "}
+            </p>
+            <p className="now">
+              W chwili obecnej posiadamy w sprzedaży wyroby ceramiczne
+              najlepszej jakości.{" "}
+            </p>
+            {/* <div className="btn-offer">
           <Link href="" className="check-offer">
             <img src="/icons/arrow-right.png" />
             Sprawdzam ofertę
           </Link>
         </div> */}
-        </div>
+          </div>
 
-        <div className="office-text reveal">
-          <div className="btn-offer">
+          <div className="office-text reveal">
+            <div className="btn-offer">
+              <Link href="" className="check-offer">
+                <img src="/icons/arrow-right.png" />
+                Sprawdzam ofertę
+              </Link>
+            </div>
+            <p className="come-to-us">
+              W Ceramice znajdziesz wszystko co jest Ci niezbędne do wykonania
+              dachu, elewacji i ogrodzenia z wyrobów ceramicznych{" "}
+            </p>
+            <p className="goodpq">
+              Mamy to wszystko w konkurencyjnej cenie i najlepszej jakości{" "}
+            </p>
+            <p className="welcome">
+              Zapraszamy na ulicę Baranowicką 144 w Białymstoku
+            </p>
+          </div>
+        </section>
+        <section
+          className={`${isMenuOpen ? "blurred" : ""} reveal`}
+          id="office"
+        >
+          <div className="desktop-btn-offer">
             <Link href="" className="check-offer">
               <img src="/icons/arrow-right.png" />
               Sprawdzam ofertę
             </Link>
           </div>
-          <p className="come-to-us">
-            W Ceramice znajdziesz wszystko co jest Ci niezbędne do wykonania
-            dachu, elewacji i ogrodzenia z wyrobów ceramicznych{" "}
-          </p>
-          <p className="goodpq">
-            Mamy to wszystko w konkurencyjnej cenie i najlepszej jakości{" "}
-          </p>
-          <p className="welcome">
-            Zapraszamy na ulicę Baranowicką 144 w Białymstoku
-          </p>
-        </div>
-      </section>
-      <section className={`${isMenuOpen ? "blurred" : ""} reveal`} id="office">
-      <div className="desktop-btn-offer">
-          <Link href="" className="check-offer">
-            <img src="/icons/arrow-right.png" />
-            Sprawdzam ofertę
-          </Link>
-        </div>
-        <div className="office-gallery-container">
-          <div className="office-gallery" ref={galleryRef}>
-            {images.map((src, index) => (
-              <div
-                key={src}
-                className={index === activeIndex ? "active" : ""}
-                onClick={() => handleImageClick(index)}
-              >
-                <img src={src} alt={`Obraz ${index + 1}`} />
-              </div>
-            ))}
-            <button className="left-go" onClick={goLeft}>
-              {"<"}
-            </button>
-            <button className="right-go" onClick={goRight}>
-              {">"}
-            </button>
+          <div className="office-gallery-container">
+            <div className="office-gallery" ref={galleryRef}>
+              {images.map((src, index) => (
+                <div
+                  key={src}
+                  className={index === activeIndex ? "active" : ""}
+                  onClick={() => handleImageClick(index)}
+                >
+                  <img src={src} alt={`Obraz ${index + 1}`} />
+                </div>
+              ))}
+              <button className="left-go" onClick={goLeft}>
+                {"<"}
+              </button>
+              <button className="right-go" onClick={goRight}>
+                {">"}
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {isModalOpen && (
         <div className="modal-backdrop" onClick={closeModal}>
